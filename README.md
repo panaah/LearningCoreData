@@ -1,0 +1,2 @@
+# LearningCoreData
+core data practive
