@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Address;
 
 @interface Person : NSManagedObject
 
@@ -17,6 +18,6 @@
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSNumber * personId;
 @property (nonatomic, retain) NSString * sex;
-@property (nonatomic, retain) NSManagedObject *address;
+@property (nonatomic, retain) Address *address;
 
 @end

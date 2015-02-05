@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982AEB2B1A8315DC000A3A25 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 982AEB2A1A8315DC000A3A25 /* ListTableViewController.m */; };
+		982AEB2F1A831607000A3A25 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 982AEB2D1A831607000A3A25 /* AddViewController.m */; };
+		982AEB301A831607000A3A25 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982AEB2E1A831607000A3A25 /* AddViewController.xib */; };
 		98E4EC621A81C1E800066D12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E4EC611A81C1E800066D12 /* main.m */; };
 		98E4EC651A81C1E800066D12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E4EC641A81C1E800066D12 /* AppDelegate.m */; };
 		98E4EC681A81C1E800066D12 /* LearningCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98E4EC661A81C1E800066D12 /* LearningCoreData.xcdatamodeld */; };
-		98E4EC6B1A81C1E800066D12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E4EC6A1A81C1E800066D12 /* ViewController.m */; };
-		98E4EC6E1A81C1E800066D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E4EC6C1A81C1E800066D12 /* Main.storyboard */; };
 		98E4EC701A81C1E800066D12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E4EC6F1A81C1E800066D12 /* Images.xcassets */; };
 		98E4EC731A81C1E800066D12 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E4EC711A81C1E800066D12 /* LaunchScreen.xib */; };
 		98E4EC7F1A81C1E800066D12 /* LearningCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E4EC7E1A81C1E800066D12 /* LearningCoreDataTests.m */; };
@@ -30,15 +31,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		982AEB291A8315DC000A3A25 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		982AEB2A1A8315DC000A3A25 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		982AEB2C1A831607000A3A25 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		982AEB2D1A831607000A3A25 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		982AEB2E1A831607000A3A25 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		98E4EC5C1A81C1E800066D12 /* LearningCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E4EC601A81C1E800066D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98E4EC611A81C1E800066D12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E4EC631A81C1E800066D12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		98E4EC641A81C1E800066D12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		98E4EC671A81C1E800066D12 /* LearningCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LearningCoreData.xcdatamodel; sourceTree = "<group>"; };
-		98E4EC691A81C1E800066D12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		98E4EC6A1A81C1E800066D12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		98E4EC6D1A81C1E800066D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98E4EC6F1A81C1E800066D12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		98E4EC721A81C1E800066D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		98E4EC781A81C1E800066D12 /* LearningCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +71,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		982AEB261A8315DC000A3A25 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				982AEB271A8315DC000A3A25 /* Add */,
+				982AEB281A8315DC000A3A25 /* List */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		982AEB271A8315DC000A3A25 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				982AEB2C1A831607000A3A25 /* AddViewController.h */,
+				982AEB2D1A831607000A3A25 /* AddViewController.m */,
+				982AEB2E1A831607000A3A25 /* AddViewController.xib */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		982AEB281A8315DC000A3A25 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				982AEB291A8315DC000A3A25 /* ListTableViewController.h */,
+				982AEB2A1A8315DC000A3A25 /* ListTableViewController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		98E4EC531A81C1E800066D12 = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +122,11 @@
 			children = (
 				98E4EC631A81C1E800066D12 /* AppDelegate.h */,
 				98E4EC641A81C1E800066D12 /* AppDelegate.m */,
-				98E4EC691A81C1E800066D12 /* ViewController.h */,
-				98E4EC6A1A81C1E800066D12 /* ViewController.m */,
-				98E4EC6C1A81C1E800066D12 /* Main.storyboard */,
+				982AEB261A8315DC000A3A25 /* View Controllers */,
+				98E4EC8E1A81C8F000066D12 /* Models */,
 				98E4EC6F1A81C1E800066D12 /* Images.xcassets */,
 				98E4EC711A81C1E800066D12 /* LaunchScreen.xib */,
 				98E4EC661A81C1E800066D12 /* LearningCoreData.xcdatamodeld */,
-				98E4EC8E1A81C8F000066D12 /* Models */,
 				98E4EC5F1A81C1E800066D12 /* Supporting Files */,
 			);
 			path = LearningCoreData;
@@ -228,7 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98E4EC6E1A81C1E800066D12 /* Main.storyboard in Resources */,
+				982AEB301A831607000A3A25 /* AddViewController.xib in Resources */,
 				98E4EC731A81C1E800066D12 /* LaunchScreen.xib in Resources */,
 				98E4EC701A81C1E800066D12 /* Images.xcassets in Resources */,
 			);
@@ -251,9 +280,10 @@
 				98E4EC8D1A81C8E200066D12 /* Address.m in Sources */,
 				98E4EC651A81C1E800066D12 /* AppDelegate.m in Sources */,
 				98E4EC621A81C1E800066D12 /* main.m in Sources */,
+				982AEB2F1A831607000A3A25 /* AddViewController.m in Sources */,
 				98E4EC8A1A81C8E100066D12 /* Person.m in Sources */,
-				98E4EC6B1A81C1E800066D12 /* ViewController.m in Sources */,
 				98E4EC681A81C1E800066D12 /* LearningCoreData.xcdatamodeld in Sources */,
+				982AEB2B1A8315DC000A3A25 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,14 +306,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		98E4EC6C1A81C1E800066D12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98E4EC6D1A81C1E800066D12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		98E4EC711A81C1E800066D12 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,6 +466,7 @@
 				98E4EC841A81C1E800066D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98E4EC851A81C1E800066D12 /* Build configuration list for PBXNativeTarget "LearningCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +475,7 @@
 				98E4EC871A81C1E800066D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
