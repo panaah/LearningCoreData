@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
-@class Address;
+#import "Address.h"
 
 @interface Person : NSManagedObject
 

@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController">
             <connections>
+                <outlet property="btnCancel" destination="qw3-i3-S5r" id="Lb9-k6-x8T"/>
+                <outlet property="btnSaveAndAddMore" destination="4Pz-hN-ThS" id="eJe-sc-Vd2"/>
+                <outlet property="btnSaveAndExit" destination="frf-xa-1tt" id="dkj-XC-L9b"/>
                 <outlet property="txtAge" destination="Oha-Df-fyL" id="y3O-sS-Kua"/>
                 <outlet property="txtCity" destination="jsP-nE-Jja" id="OZV-LY-itG"/>
                 <outlet property="txtName" destination="N3N-S6-wRK" id="4FN-G8-zEL"/>

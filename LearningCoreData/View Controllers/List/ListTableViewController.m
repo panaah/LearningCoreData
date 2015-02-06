@@ -73,8 +73,18 @@
         
         cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@",person.name,person.age, person.sex];
         cell.detailTextLabel.text = person.phone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    AddViewController *addVC = [AddViewController new];
+    addVC.title = @"Person Info";
+    addVC.objPerson = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 
