@@ -72,12 +72,29 @@
         Person *record = (Person *)[_delegate.managedObjectContext objectWithID:self.objPerson.objectID];
 //        NSError *error;
 //        Person *record = (Person *)[_delegate.managedObjectContext existingObjectWithID:self.objPerson.objectID error:&error];
-        
         [record setValue:self.txtName.text forKey:@"name"];
         [record setValue:[NSNumber numberWithInteger:[self.txtAge.text integerValue]] forKey:@"age"];
         [record setValue:self.txtSex.text forKey:@"sex"];
         [record setValue:self.txtPhone.text forKey:@"phone"];
-//        [record setValue:self.txtName.text forKey:@"personId"];
+
+        // Address record
+        Address *addressRecord;
+        if (self.objPerson.address == nil) {
+            NSEntityDescription *addressEntity = [NSEntityDescription entityForName:@"Address" inManagedObjectContext:_delegate.managedObjectContext];
+            addressRecord = (Address *)[[NSManagedObject alloc] initWithEntity:addressEntity insertIntoManagedObjectContext:_delegate.managedObjectContext];
+        } else {
+            addressRecord = (Address *)[_delegate.managedObjectContext objectWithID:self.objPerson.address.objectID];
+//            NSError *error;
+//            Address *addressRecord = (Address *)[_delegate.managedObjectContext existingObjectWithID:self.objPerson.address.objectID error:&error];
+        }
+        
+        [addressRecord setValue:self.txtCity.text forKey:@"city"];
+//        [addressRecord setValue:self.txtSex.text forKey:@"state"];
+//        [addressRecord setValue:self.txtPhone.text forKey:@"zip"];
+//        [addressRecord setValue:self.txtPhone.text forKey:@"country"];
+//        [addressRecord setValue:self.txtPhone.text forKey:@"street"];
+        
+        record.address = addressRecord;
         
         // Save Record
         NSError *error = nil;
@@ -85,7 +102,7 @@
         if ([_delegate.managedObjectContext save:&error]) {
             // Dismiss View Controller
 //            [self dismissViewControllerAnimated:YES completion:nil];
-            [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Person info is updated." delegate:nil cancelButtonTitle:@"Great" otherButtonTitles:nil] show];
+            [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Person info is updated." delegate:self cancelButtonTitle:@"Great" otherButtonTitles:nil] show];
 
         } else {
             if (error) {
@@ -99,18 +116,24 @@
         
     } else {
         //    if (name && name.length) {
-        // Create Entity
+        // Create Person's Entity
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:_delegate.managedObjectContext];
-        
-        // Initialize Record
-        NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:_delegate.managedObjectContext];
-        
+        Person *record = (Person *)[[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:_delegate.managedObjectContext];
         // Populate Record
         [record setValue:self.txtName.text forKey:@"name"];
         [record setValue:[NSNumber numberWithInteger:[self.txtAge.text integerValue]] forKey:@"age"];
         [record setValue:self.txtSex.text forKey:@"sex"];
         [record setValue:self.txtPhone.text forKey:@"phone"];
-        //        [record setValue:self.txtName.text forKey:@"personId"];
+        
+        // Create Address entity
+        NSEntityDescription *addressEntity = [NSEntityDescription entityForName:@"Address" inManagedObjectContext:_delegate.managedObjectContext];
+        NSManagedObject *addressRecord = [[NSManagedObject alloc] initWithEntity:addressEntity insertIntoManagedObjectContext:_delegate.managedObjectContext];
+//        [addressRecord setValue:self.txtCity.text forKey:@"street"];
+        [addressRecord setValue:self.txtCity.text forKey:@"city"];
+//        [addressRecord setValue:self.txtCity.text forKey:@"state"];
+//        [addressRecord setValue:self.txtCity.text forKey:@"country"];
+//        [addressRecord setValue:self.txtCity.text forKey:@"zip"];
+        record.address = (Address *)addressRecord;
         
         // Save Record
         NSError *error = nil;
@@ -163,18 +186,24 @@
         
     } else {
         //    if (name && name.length) {
-        // Create Entity
+        // Create Person's Entity
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:_delegate.managedObjectContext];
-        
-        // Initialize Record
-        NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:_delegate.managedObjectContext];
-        
+        Person *record = (Person *)[[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:_delegate.managedObjectContext];
         // Populate Record
         [record setValue:self.txtName.text forKey:@"name"];
         [record setValue:[NSNumber numberWithInteger:[self.txtAge.text integerValue]] forKey:@"age"];
         [record setValue:self.txtSex.text forKey:@"sex"];
         [record setValue:self.txtPhone.text forKey:@"phone"];
-        //        [record setValue:self.txtName.text forKey:@"personId"];
+        
+        // Create Address entity
+        NSEntityDescription *addressEntity = [NSEntityDescription entityForName:@"Address" inManagedObjectContext:_delegate.managedObjectContext];
+        NSManagedObject *addressRecord = [[NSManagedObject alloc] initWithEntity:addressEntity insertIntoManagedObjectContext:_delegate.managedObjectContext];
+//        [addressRecord setValue:self.txtCity.text forKey:@"street"];
+        [addressRecord setValue:self.txtCity.text forKey:@"city"];
+//        [addressRecord setValue:self.txtCity.text forKey:@"state"];
+//        [addressRecord setValue:self.txtCity.text forKey:@"country"];
+//        [addressRecord setValue:self.txtCity.text forKey:@"zip"];
+        record.address = (Address *)addressRecord;
         
         // Save Record
         NSError *error = nil;
@@ -200,11 +229,15 @@
 }
 
 - (IBAction)btnCancelClicked:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.objPerson) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+         [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self btnCancelClicked:nil];
 }
 
 @end

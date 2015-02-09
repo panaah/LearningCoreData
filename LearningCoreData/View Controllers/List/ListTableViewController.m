@@ -71,8 +71,8 @@
     if (self.fetchedResultsController.fetchedObjects.count) {
         Person *person = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
-        cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@",person.name,person.age, person.sex];
-        cell.detailTextLabel.text = person.phone;
+        cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@ - %@",person.name,person.age, person.sex,person.phone];
+        cell.detailTextLabel.text = person.address.city;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return cell;
@@ -185,8 +185,8 @@
     Person *person = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // Update Cell
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@",person.name,person.age, person.sex];
-    cell.detailTextLabel.text = person.phone;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@ - %@",person.name,person.age, person.sex,person.phone];
+    cell.detailTextLabel.text = person.address.city;
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
